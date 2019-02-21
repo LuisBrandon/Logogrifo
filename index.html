@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Logogrifo</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script> 
+    $(document).ready(function(){              
+        
+            $.ajax({
+                type: 'GET',
+                url: 'js/respuestas.json',
+                success: function(data){
+                     
+                     FuncionEjemplo(data);                 
+                },
+                error: function(){
+                    alert("No se ha podido obtener los datos del servidor.")
+                }
+
+            });
+
+ 
+        
+        // OnKeyFuncion();
+
+        
+    });
+
+    function FuncionEjemplo(data){
+        let array = [];
+        console.log(data);
+        for(var i = 0;i<data.preguntas.length;i++){
+            array[i] = data.preguntas[i].respuesta;
+            
+        }
+        
+        
+        GeneraInputs(array);
+        
+    }
+
+    
+
+    function GeneraInputs(array){
+        for(var i = 0;i<7;i++){
+            for(var j = 0;j<10-i;j++){
+                $("#InputLetras").append("<input type='text'>");
+                $("#InputLetras").append("<span id='Numero'>a</span>");
+            }
+            $("#InputLetras").append("<br>");
+        }
+        $("#InputLetras").append("<input type='button' value='Comprobar' id='comprobar'>");
+
+       
+
+    }
+
+    function OnKeyFuncion(){
+        
+    }
+
+    function Myfuncion(value){
+        let a = $("#algo").val();
+        console.log(a);
+    }
+
+    </script>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <p id="InputLetras"></p>
+
+            </div>
+
+
+        </div>
+        <span></span>
+       
+
+
+
+
+
+
+    </body>
+</html>
