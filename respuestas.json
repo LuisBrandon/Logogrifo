@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "palabra": "grupusculo",
+        "descripcion": "Grupo reducido de personas con una misma ideología"
+    },
+    {
+        "id": "2",
+        "palabra": "desenojar",
+        "descripcion": "Esparcir el ánimo"
+    },
+    {
+        "id": "3",
+        "palabra": "francote",
+        "descripcion": "Ingenuo y bonachón"
+    },
+    {
+        "id": "4",
+        "palabra": "frangir",
+        "descripcion": "Dividir en pedazos"
+    },
+    {
+        "id": "5",
+        "palabra": "frañer",
+        "descripcion": "Romper"
+    },
+    {
+        "id": "6",
+        "palabra": "freir",
+        "descripcion": "Hacer un huevo en la sartén"
+    },
+    {
+        "id": "7",
+        "palabra": "frac",
+        "descripcion": "Traje de ceremonia"
+    }
+]
